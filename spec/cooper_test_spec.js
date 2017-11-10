@@ -1,5 +1,6 @@
-describe('Cooper Test', function() {
+describe('CooperUnitTest', function() {
   var athlete;
+  var distance;
 
   beforeEach(function() {
     athlete = new Athlete();
