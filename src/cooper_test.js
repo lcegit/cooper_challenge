@@ -1,5 +1,5 @@
 function CooperUnitTest();
 
-function getUnits(athlete) {
-
+function resultMessage(athlete) {
+//set conditional statement to compare athletes input
 }

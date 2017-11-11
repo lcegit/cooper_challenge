@@ -3,7 +3,7 @@ describe('Athlete', function() {
 
   describe('Female results', function() {
     beforeEach(function() {
-      athlete = new Athleten({ gender: 'f', age: 15 });
+      athlete = new Athlete({ gender: 'f', age: 15 });
     });
 
     it('compares the data with females chart', function() {
