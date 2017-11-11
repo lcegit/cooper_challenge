@@ -1,13 +1,14 @@
-describe('CooperUnitTest', function() {
+describe('CooperTest', function() {
   var athlete;
-  var distance;
+  var cooper;
 
   beforeEach(function() {
-    athlete = new Athlete();
+    athlete = new Athlete({ gender: 'female', age: 15 });
+    cooper = new CooperTest();
   });
 
-  xit('should compare result values with normative data table', function() {
-    athlete.matchResult(result);
-    expect(athlete.matchResult).toEqual(result);
+  xit('should compare distance values with normative data table', function() {
+    cooper.assessmentFemales(distance);
+    expect(cooper.distance).toEqual(2500);
   });
 });
