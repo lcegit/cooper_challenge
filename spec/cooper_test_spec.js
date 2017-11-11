@@ -7,8 +7,7 @@ describe('CooperTest', function() {
     cooper = new CooperTest();
   });
 
-  xit('should compare distance values with normative data table', function() {
-    cooper.assessmentFemales(distance);
-    expect(cooper.distance).toEqual(2500);
+  it('should compare distance values with normative data table', function() {
+    expect(cooper.assessmentFemales(athlete, 2500)).toEqual('Above average');
   });
 });

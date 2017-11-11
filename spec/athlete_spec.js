@@ -7,11 +7,11 @@ describe('Athlete', function() {
       athlete = new Athlete({ gender: 'female', age: 15 });
     });
 
-    it('compares the data with females chart', function() {
+    xit('compares the data with females chart', function() {
       expect(athlete.gender).toEqual('female');
     });
 
-    it('athlete should be 15 years of age', function() {
+    xit('athlete should be 15 years of age', function() {
       expect(athlete.age).toEqual(15);
     });
 });

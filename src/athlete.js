@@ -4,7 +4,7 @@ function Athlete(attr) {
 }
 
 /*
-Athlete.prototype.calc_assessmentFemales = function(distance) {
+Athlete.prototype.assessmentFemales = function(distance) {
   cooper = new CooperTest();
   cooper.assessmentFemales(this);
 };
