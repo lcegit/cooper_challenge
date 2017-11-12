@@ -22,9 +22,13 @@ Input distance:
 cooper.cooperAssessment(athlete, 2056) << input value in meters
 ```
 
-# My solution #
+## My solution ##
 
 
 I constructed 2D arrays to set up the chart data using a for loop. To access assessment values, loop functions are used.
 
+## Resources ##
+
 The setup is inspired by [diraulo's version](https://github.com/CraftAcademy/cooper-js) where arrays are used to store chart data.
+
+Other inspiration comes from CraftAcademy course material, coach input, YouTube, Stack Overflow. 
