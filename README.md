@@ -19,12 +19,12 @@ cooper = new CooperTest();
 ```
 Input distance:
 ```
-cooper.cooperAssessment(athlete, 2356) << input value in meters 
+cooper.cooperAssessment(athlete, 2356) << input value in meters
 ```
 
 # My solution #
 
 
-I used 2d arrays to set up the chart data and access the value in the indexes using loops.
+I constructed 2d arrays to set up the chart data using a for loop and then access the value in the indexes using loop functions.
 
-The setup is inspired by Raoul's version where 2d arrays are used.
+The setup is inspired by [diraulo's version](https://github.com/CraftAcademy/cooper-js) where 2d arrays are used.
