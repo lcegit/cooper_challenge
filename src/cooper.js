@@ -16,6 +16,36 @@ var femaleChart = new Array(7);
       femaleChart[1][3] = 1600;
       femaleChart[1][4] = 0;
 
+      femaleChart[2][0] = 2300;
+      femaleChart[2][1] = 2100;
+      femaleChart[2][2] = 1800;
+      femaleChart[2][3] = 1700;
+      femaleChart[2][4] = 0;
+
+      femaleChart[3][0] = 2700;
+      femaleChart[3][1] = 2200;
+      femaleChart[3][2] = 1800;
+      femaleChart[3][3] = 1500;
+      femaleChart[3][4] = 0;
+
+      femaleChart[4][0] = 2500;
+      femaleChart[4][1] = 2000;
+      femaleChart[4][2] = 1700;
+      femaleChart[4][3] = 1400;
+      femaleChart[4][4] = 0;
+
+      femaleChart[5][0] = 2300;
+      femaleChart[5][1] = 1900;
+      femaleChart[5][2] = 1500;
+      femaleChart[5][3] = 1200;
+      femaleChart[5][4] = 0;
+
+      femaleChart[6][0] = 2200;
+      femaleChart[6][1] = 1700;
+      femaleChart[6][2] = 1400;
+      femaleChart[6][3] = 1100;
+      femaleChart[6][4] = 0;
+
 var maleChart = new Array(7);
   for (var i = 0; i< maleChart.length; i++) {
       maleChart[i] = new Array(5);
@@ -31,6 +61,36 @@ var maleChart = new Array(7);
       maleChart[1][2] = 2300;
       maleChart[1][3] = 2200;
       maleChart[1][4] = 0;
+
+      maleChart[2][0] = 3000;
+      maleChart[2][1] = 2700;
+      maleChart[2][2] = 2500;
+      maleChart[2][3] = 2300;
+      maleChart[2][4] = 0;
+
+      maleChart[3][0] = 2800;
+      maleChart[3][1] = 2400;
+      maleChart[3][2] = 2200;
+      maleChart[3][3] = 1600;
+      maleChart[3][4] = 0;
+
+      maleChart[4][0] = 2700;
+      maleChart[4][1] = 2200;
+      maleChart[4][2] = 1800;
+      maleChart[4][3] = 1500;
+      maleChart[4][4] = 0;
+
+      maleChart[5][0] = 2500;
+      maleChart[5][1] = 2100;
+      maleChart[5][2] = 1700;
+      maleChart[5][3] = 1400;
+      maleChart[5][4] = 0;
+
+      maleChart[6][0] = 2200;
+      maleChart[6][1] = 1700;
+      maleChart[6][2] = 1400;
+      maleChart[6][3] = 1100;
+      maleChart[6][4] = 0;
 
   var ageArr = new Array(7);
 
