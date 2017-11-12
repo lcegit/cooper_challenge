@@ -1,5 +1,13 @@
 function CooperTest() {}
-
+/*
+var age = { age: 13 && 14,
+            age: 15 && 16,
+            age: 17 && > 19,
+            age: 20 && age > 29,
+            age: 30 && age > 39,
+            age: 40 && age > 49,
+            age: age > 50 }
+*/
 var age_13 = { age: 13 && 14 };
 var age_15 = { age: 15 && 16 };
 var age_17 = { age: 17 && age_17 > 19 };
