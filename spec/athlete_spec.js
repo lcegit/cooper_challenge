@@ -2,27 +2,25 @@ describe('Athlete', function() {
   var athlete;
   var cooper;
 
-  describe('Female distances, 15-16', function() {
-    beforeEach(function() {
-      athlete = new Athlete({ gender: 'female', age: 15 });
-    });
-
-    xit('compares the data with females chart', function() {
-      expect(athlete.gender).toEqual('female');
-    });
-
-    xit('athlete should be 15 years of age', function() {
-      expect(athlete.age).toEqual(15);
-    });
-});
   describe('CooperTest', function() {
       beforeEach(function() {
         athlete = new Athlete({ gender: 'female', age: 15 });
         cooper = new CooperTest();
       });
 
-    it('15 year old female athlete runs a distance of 2500', function() {
-      expect(cooper.assessmentFemales(athlete, 2500)).toEqual('Above average');
+    it('15 year old female athlete runs a distance of 2000', function() {
+      expect(cooper.cooperAssessment(athlete, 1900)).toEqual('Average');
     });
 });
+
+  describe('CooperTest', function() {
+      beforeEach(function() {
+        athlete = new Athlete({ gender: 'male', age: 13 });
+        cooper = new CooperTest();
+      });
+
+    it('13 year old male athlete runs a distance of 2000', function() {
+      expect(cooper.cooperAssessment(athlete, 2400)).toEqual('Above average');
+    });
+  });
 });

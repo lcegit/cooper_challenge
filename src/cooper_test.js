@@ -1,87 +1,74 @@
 function CooperTest() {}
-/*
-var age = { age: 13 && 14,
-            age: 15 && 16,
-            age: 17 && > 19,
-            age: 20 && age > 29,
-            age: 30 && age > 39,
-            age: 40 && age > 49,
-            age: age > 50 }
-*/
-var age_13 = { age: 13 && 14 };
-var age_15 = { age: 15 && 16 };
-var age_17 = { age: 17 && age_17 > 19 };
-var age_20 = { age: 20 && age_20 > 29 };
-var age_30 = { age: 30 && age_30 > 39 };
-var age_40 = { age: 40 && age_40 > 49 };
-var age_50 = { age: age_50 > 50 };
 
-var female = { gender: "female" }
-var male = { gender: "male" }
+var femaleChart = new Array(7);
+  for (var i = 0; i< femaleChart.length; i++) {
+      femaleChart[i] = new Array(5);
+    }
+      femaleChart[0][0] = 2000;
+      femaleChart[0][1] = 1900;
+      femaleChart[0][2] = 1600;
+      femaleChart[0][3] = 1500;
+      femaleChart[0][4] = 0;
+
+      femaleChart[1][0] = 2100;
+      femaleChart[1][1] = 2000;
+      femaleChart[1][2] = 1700;
+      femaleChart[1][3] = 1600;
+      femaleChart[1][4] = 0;
+
+var maleChart = new Array(7);
+  for (var i = 0; i< maleChart.length; i++) {
+      maleChart[i] = new Array(5);
+    }
+      maleChart[0][0] = 2700;
+      maleChart[0][1] = 2400;
+      maleChart[0][2] = 2200;
+      maleChart[0][3] = 2100;
+      maleChart[0][4] = 0;
+
+      maleChart[1][0] = 2800;
+      maleChart[1][1] = 2500;
+      maleChart[1][2] = 2300;
+      maleChart[1][3] = 2200;
+      maleChart[1][4] = 0;
+
+  var ageArr = new Array(7);
+
+      ageArr[0] = 14;
+      ageArr[1] = 16;
+      ageArr[2] = 19;
+      ageArr[3] = 29;
+      ageArr[4] = 39;
+      ageArr[5] = 49;
+      ageArr[6] = 100;
 
 var cooperindex = { 0: "Excellent", 1: "Above average", 2: "Average", 3: "Below average", 4: "Slow" }
 
-CooperTest.prototype.assessmentFemales = function(athlete, distance) {
-if (female) {
-  if (age_13) {
-    if (distance < 2100) {
-      return cooperindex[4];
+CooperTest.prototype.cooperAssessment = function(athlete, distance) {
+  var column;
+    if (athlete.gender == 'female') {
+      for (var i = 0; i < femaleChart.length; i++) {
+        if (distance >= femaleChart[this.ageGroup(athlete.age)][i]) {
+          column = i; break;
+        }
+      }
     }
-    else if (distance < 2199) {
-      return cooperindex[3];
-    }
-    else if (distance > 2200 && distance < 2399) {
-      return cooperindex[2];
-    }
-    else if (distance >= 2400 && distance < 2699) {
-      return cooperindex[1];
-    }
-    else if (distance > 2700) {
-      return cooperindex[0];
-    }
-  }
-}
-  if (age_15) {
-    if (distance < 2200) {
-      return cooperindex[4];
-    }
-    else if (distance > 2200 && distance < 2299) {
-      return cooperindex[3];
-    }
-    else if (distance > 2300 && distance < 2499) {
-      return cooperindex[2];
-    }
-    else if (distance >= 2500 && distance < 2799) {
-      return cooperindex[1];
-    }
-    else if (distance > 2800) {
-      return cooperindex[0];
-    }
+        else if (athlete.gender == 'male') {
+          for (var i = 0; i < maleChart.length; i++) {
+            if (distance >= maleChart[this.ageGroup(athlete.age)][i]) {
+              column = i; break;
+            }
+          }
+        }
+    return cooperindex[column];
   }
 
-if (age_17) {
-  if (distance < 2300) {
-    return cooperindex[4];
+CooperTest.prototype.ageGroup = function(age) {
+  var row;
+    for (var i = 0; i < 7; i++) {
+      if (age <= ageArr[i]) {
+      row = i; break;
+      }
+    }
+    return row;
   }
-  else if (distance > 2300 && distance < 2299) {
-    return cooperindex[3];
-  }
-  else if (distance > 2500 && distance < 2699) {
-    return cooperindex[2];
-  }
-  else if (distance >= 2700 && distance < 2999) {
-    return cooperindex[1];
-  }
-  else if (distance > 3000) {
-    return cooperindex[0];
-  }
-}
-}
-
-    /*
-    if (athlete.age == 20 && 29 && distance < 1600) { return 'Slow'; }
-    if (athlete.age == 20 && 29 && distance > 1600 && distance < 2199) { return 'Below average'; }
-    if (athlete.age == 20 && 29 && distance > 2200 && distance < 2399) { return 'Average'; }
-    if (athlete.age == 20 && 29 && distance >= 2400 && distance < 2799) { return 'Above average'; }
-    if (athlete.age == 20 && 29 && distance > 2800) { return 'Excellent' }
-    */

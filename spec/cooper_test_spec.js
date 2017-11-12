@@ -8,6 +8,6 @@ describe('CooperTest', function() {
   });
 
   it('should compare distance values with normative data table', function() {
-    expect(cooper.assessmentFemales(athlete, 2500)).toEqual('Above average');
+    expect(cooper.cooperAssessment(athlete, 2000)).toEqual('Above average');
   });
 });
