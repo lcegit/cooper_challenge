@@ -125,7 +125,7 @@ CooperTest.prototype.cooperAssessment = function(athlete, distance) {
 
 CooperTest.prototype.ageGroup = function(age) {
   var row;
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < ageArray.length; i++) {
       if (age <= ageArr[i]) {
       row = i; break;
       }
