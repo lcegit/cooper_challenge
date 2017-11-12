@@ -113,13 +113,13 @@ CooperTest.prototype.cooperAssessment = function(athlete, distance) {
         }
       }
     }
-        else if (athlete.gender == 'male') {
-          for (var i = 0; i < maleChart.length; i++) {
-            if (distance >= maleChart[this.ageGroup(athlete.age)][i]) {
-              column = i; break;
-            }
-          }
+    else if (athlete.gender == 'male') {
+      for (var i = 0; i < maleChart.length; i++) {
+        if (distance >= maleChart[this.ageGroup(athlete.age)][i]) {
+          column = i; break;
         }
+      }
+    }
     return cooperindex[column];
   }
 
