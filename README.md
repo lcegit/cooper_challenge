@@ -26,7 +26,7 @@ cooper.cooperAssessment(athlete, 2056) << input value in meters
 ## My solution ##
 
 
-I constructed 2D arrays to set up the chart data using a for loop. To access assessment values, loop functions are used.
+I constructed 2D arrays to set up the chart data using a for loop. To access assessment values, for loop functions are used.
 
 ## Resources ##
 

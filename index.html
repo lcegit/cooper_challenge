@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Cooper Test</title>
+  <script src="src/cooper.js"></script>
+  <script src="src/athlete.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+  </head>
+    <body>
+      <div class="row">
+          <div class="grid-x">
+            <div class="auto cell"></div>
+            <div class="small-4 cell">
+              <div class="cell">
+              <h2 style="color: #1779ba">Cooper Test</h2></div>
+                <form>
+                  <input type="text" id="age" placeholder="Age">
+                  <input type="text" id="gender" placeholder="Gender">
+                  <input type="text" id="distance" placeholder="Distance">
+                  <input type="button" id="cooperAssessment" value="Get my result" class="button">
+                </form>
+            <div>
+            <span id="result"></span>
+          </div>
+          </div>
+        <div class="auto cell"></div>
+      </div>
+      </div>
+      </body>
+
+      <script>
+        $(function() {
+        });
+        $('#cooperAssessment').click(function() {
+          var a = ($('#age').val());
+          var g = ($('#gender').val());
+          var d = ($('#distance').val());
+
+          var athlete = new Athlete({
+            age: a,
+            gender: g,
+          });
+          var cooper = new CooperTest({
+            distance: d,
+          });
+        athlete.athleteCooperAssessment();
+        $('#result').html('and you are doing quite well' + cooper.distance);
+      });
+
+      </script>
+  </head>
+</html>

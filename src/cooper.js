@@ -1,4 +1,5 @@
 function CooperTest() {}
+var distance;
 
 var femaleChart = new Array(7);
   for (var i = 0; i< femaleChart.length; i++) {
@@ -125,7 +126,7 @@ CooperTest.prototype.cooperAssessment = function(athlete, distance) {
 
 CooperTest.prototype.ageGroup = function(age) {
   var row;
-    for (var i = 0; i < ageArray.length; i++) {
+    for (var i = 0; i < ageArr.length; i++) {
       if (age <= ageArr[i]) {
       row = i; break;
       }
